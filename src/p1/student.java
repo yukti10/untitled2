@@ -169,7 +169,7 @@ public class student {
     }
     public void calculateGrade(){
         if (this.percentage>=94.0){
-            this.grade="A+";
+            this.setGrade("A+");
         }
         else if (this.percentage>=87.0 && this.percentage<94.0){
             this.grade="A";
