@@ -155,4 +155,55 @@ public class student {
     private void setGrade(String grade) {
         this.grade = grade;
     }
+    public void calculateTotalMarks(){
+        float total = 0.0f;
+        for (int i =0;i<marks.length;i++){
+            total+=marks[i];
+        }
+        setTotalMarks(total);
+    }
+    public void calculatePercentage(){
+        float per = 0.0f;
+        per = this.totalMarks/(marks.length*100);
+        setPercentage(per);
+    }
+    public void calculateGrade(){
+        if (this.percentage>=94.0){
+            this.grade="A+";
+        }
+        else if (this.percentage>=87.0 && this.percentage<94.0){
+            this.grade="A";
+        }
+        else if (this.percentage>=80.0 && this.percentage<87.0){
+            this.grade="A-";
+        }
+        else if (this.percentage>=77.0 && this.percentage<79.0){
+            this.grade="B+";
+        }
+        else if (this.percentage>=73.0 && this.percentage<77.0){
+            this.grade="B";
+        }
+        else if (this.percentage>=70.0 && this.percentage<73.0){
+            this.grade="B-";
+        }
+        else if (this.percentage>=67.0 && this.percentage<70.0){
+            this.grade="C+";
+        }
+        else if (this.percentage>=63.0 && this.percentage<67.0){
+            this.grade="C";
+        }
+        else if (this.percentage>=60.0 && this.percentage<63.0){
+            this.grade="C-";
+        }
+        else if (this.percentage>=50.0 && this.percentage<60.0){
+            this.grade="D";
+        }
+        else {
+            this.grade="F";
+        }
+    }
+
+
+    }
+
 }
